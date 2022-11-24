@@ -13,7 +13,10 @@ const path = require("path");
 //ROUTES
 app.use(express.json());
 // app.use(express.urlencoded({ extended: false }));
-app.use("/images", express.static(path.join(__dirname, "/images")));
+app.use(
+  "/images",
+  express.static(path.join("https://blog-api-l0jr.onrender.com", "/images"))
+);
 app.use(cors());
 // DB CONNECTION
 mongoose
